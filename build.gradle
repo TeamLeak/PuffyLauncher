@@ -72,9 +72,9 @@ runtime {
 //            overwrite = true
 //        }
 //    }
-    targetPlatform("win") {
-        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk18-binaries/releases/download/jdk-18.0.2%2B7/OpenJDK18U-jdk_x64_windows_hotspot_18.0.2_7.zip")
-    }
+//    targetPlatform("win") {
+//        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.2%2B7/OpenJDK15U-jdk_x64_windows_hotspot_15.0.2_7.zip")
+//    }
 
     launcher {
         noConsole = true
