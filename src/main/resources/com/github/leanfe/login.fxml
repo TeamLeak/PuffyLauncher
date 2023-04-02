@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0"
+            prefWidth="342.0" style="-fx-background-color: #14142B;" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.leanfe.controller.LoginController" fx:id="LoginPanel">
+    <stylesheets>
+        <URL value="@css/dark_theme.css"/>
+        <URL value="@css/base.css"/>
+    </stylesheets>
+    <Label alignment="CENTER" layoutX="71.0" layoutY="30.0" prefHeight="30.0" prefWidth="198.0" text="ВХОД В АККАУНТ"
+           textFill="#6e00e8">
+        <font>
+          <Font name="Segoe UI" size="24.0"/>
+        </font>
+    </Label>
+    <Separator layoutX="71.0" layoutY="68.0" prefWidth="200.0"/>
+    <TextField layoutX="54.0" layoutY="145.0" prefHeight="30.0" prefWidth="234.0" promptText="LOGIN"
+               styleClass="text-field" fx:id="login">
+        <font>
+          <Font name="Segoe UI" size="13.0"/>
+        </font>
+    </TextField>
+    <PasswordField layoutX="54.0" layoutY="204.0" prefHeight="30.0" prefWidth="234.0" promptText="PASSWORD"
+                   styleClass="text-field" fx:id="password">
+        <font>
+          <Font name="Segoe UI" size="13.0"/>
+        </font>
+    </PasswordField>
+    <JFXButton layoutX="111.0" layoutY="398.0" prefHeight="30.0" prefWidth="118.0" text="ВОЙТИ" onMouseClicked="#processLogin">
+        <font>
+          <Font name="Segoe UI Bold" size="12.0"/>
+        </font>
+    </JFXButton>
+    <GridPane layoutX="53.0" layoutY="269.0" prefHeight="30.0" prefWidth="234.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="122.9999755859375" minWidth="10.0"
+                               prefWidth="107.00003662109376"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="73.2000732421875" minWidth="1.0"
+                               prefWidth="19.799963378906256"/>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="128.39996337890625" minWidth="10.0"
+                               prefWidth="107.20001220703125"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Separator prefHeight="3.0" prefWidth="90.0"/>
+        <Label text="OR" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+        <Separator prefHeight="10.0" prefWidth="130.0" GridPane.columnIndex="2"/>
+    </GridPane>
+    <Label alignment="CENTER" layoutX="54.0" layoutY="241.0" text="Забыли пароль?" onMouseClicked="#resetPassword">
+        <font>
+          <Font size="11.0"/>
+        </font>
+    </Label>
+    <GridPane layoutX="53.0" layoutY="307.0" prefHeight="30.0" prefWidth="234.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#openYoutube" fx:id="youtube">
+            <image>
+                <Image url="@img/youtube.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.columnIndex="1" onMouseClicked="#openVK" fx:id="vk">
+            <image>
+                <Image url="@img/vk.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.columnIndex="2" onMouseClicked="#openDiscord" fx:id="discord">
+            <image>
+                <Image url="@img/discord.png"/>
+            </image>
+        </ImageView>
+    </GridPane>
+    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#close">
+        <image>
+          <Image url="@img/close.png"/>
+        </image>
+    </ImageView>
+</AnchorPane>
