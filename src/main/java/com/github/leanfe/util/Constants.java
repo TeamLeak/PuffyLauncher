@@ -38,4 +38,5 @@ public class Constants {
     public static final String DEVELOPER_GITHUB = "https://github.com/Leanfe";
 
     public static final boolean IS_FORGED = false;
+    public static final String AUTH_URL = "https://localhost:3000/api";
 }

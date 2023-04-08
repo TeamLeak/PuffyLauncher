@@ -50,10 +50,9 @@ public class FXApplication extends javafx.application.Application {
     }
 
     private static Scene loadScene() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Constants.MAIN_FXML);
 
-//        FXMLLoader fxmlLoader = new FXMLLoader(Constants.LOGIN_FXML);
-//        if (sessionManager.load())  fxmlLoader = new FXMLLoader(Constants.MAIN_FXML);
+        FXMLLoader fxmlLoader = new FXMLLoader(Constants.LOGIN_FXML);
+        if (sessionManager.load())  fxmlLoader = new FXMLLoader(Constants.MAIN_FXML);
 
         return new Scene(fxmlLoader.load());
     }

@@ -1,6 +1,8 @@
 package com.github.leanfe.controller;
 
 import com.github.leanfe.tray.TrayManager;
+import com.github.leanfe.ui.PanelManager;
+import com.github.leanfe.util.AuthManager;
 import com.github.leanfe.util.Constants;
 import com.github.leanfe.util.Utils;
 import javafx.fxml.Initializable;
@@ -22,6 +24,13 @@ public class LoginController implements Initializable {
 
     public void processLogin() {
         // TODO:
+        boolean result = AuthManager.processLogin(login.getText(), password.getText());
+
+        if (result) {
+            PanelManager.changeContext(PanelManager.Context.MAIN);
+        } else {
+            TrayManager.displayMessage("Не могу войти! Проверьте LOGIN/PASSOWRD!", TrayManager.MessageType.ERROR);
+        }
     }
 
     public void resetPassword() {
