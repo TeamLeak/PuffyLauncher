@@ -23,7 +23,7 @@
         <URL value="@css/base.css"/>
     </stylesheets>
     <Label alignment="CENTER" layoutX="71.0" layoutY="30.0" prefHeight="30.0" prefWidth="198.0" text="ВХОД В АККАУНТ"
-           textFill="#6e00e8">
+           textFill="#6e00e8" fx:id="TITLE">
         <font>
           <Font name="Segoe UI" size="24.0"/>
         </font>
@@ -99,4 +99,11 @@
           <Image url="@img/close.png"/>
         </image>
     </ImageView>
+
+    <Label alignment="CENTER" layoutX="53.0" layoutY="98.0" prefHeight="19.0" prefWidth="234.0" style="-fx-text-fill: #FF0000;" text="Проверьте введённые данные!" textFill="#e51600" visible="false" fx:id="ERROR_MESSAGE">
+        <font>
+            <Font name="Segoe UI" size="16.0" />
+        </font>
+    </Label>
+
 </AnchorPane>

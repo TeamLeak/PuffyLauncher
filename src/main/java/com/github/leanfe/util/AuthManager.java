@@ -27,11 +27,11 @@ public class AuthManager {
                 return false;
             } else {
                 // Other error occurred
-                System.out.println("Server returned error: " + response.body());
+                System.err.printf("Server returned error: %s", response.body());
                 return false;
             }
         } catch (IOException | InterruptedException e) {
-            System.out.println("Error sending request: " + e.getMessage());
+            System.err.printf("Error sending request: %s", e.getMessage());
             return false;
         }
     }

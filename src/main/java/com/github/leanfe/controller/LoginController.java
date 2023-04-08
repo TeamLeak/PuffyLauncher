@@ -6,6 +6,7 @@ import com.github.leanfe.util.AuthManager;
 import com.github.leanfe.util.Constants;
 import com.github.leanfe.util.Utils;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -21,6 +22,8 @@ public class LoginController implements Initializable {
     public ImageView vk;
     public ImageView discord;
     public AnchorPane LoginPanel;
+    public Label TITLE;
+    public Label ERROR_MESSAGE;
 
     public void processLogin() {
         // TODO:
@@ -30,6 +33,10 @@ public class LoginController implements Initializable {
             PanelManager.changeContext(PanelManager.Context.MAIN);
         } else {
             TrayManager.displayMessage("Не могу войти! Проверьте LOGIN/PASSOWRD!", TrayManager.MessageType.ERROR);
+
+            TITLE.setStyle("-fx-text-fill: #FF0000;");
+            TITLE.setText("ОШИБКА ВХОДА");
+            ERROR_MESSAGE.setVisible(true);
         }
     }
 
