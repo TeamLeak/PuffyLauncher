@@ -2,12 +2,14 @@ package com.github.leanfe;
 
 import com.github.leanfe.file.FileManager;
 import com.github.leanfe.settings.SettingsLoader;
+import com.github.leanfe.util.LogManipulation;
 
 import javax.swing.*;
 
 public class Application {
 
     public static void main(String[] args) {
+        LogManipulation.redirectErrorsToFile();
 
         FileManager.initializeAllDirs();
         SettingsLoader.initializeSettings();

@@ -33,15 +33,11 @@ dependencies {
 }
 
 mainClassName = 'com.github.leanfe.Application'
-applicationDefaultJvmArgs = ['-Djava.net.useSystemProxies=true', '--add-exports javafx.web/com.sun.webkit.dom=ALL-UNNAMED']
+applicationDefaultJvmArgs = ['-Djava.net.useSystemProxies=true']
 
 group = 'com.github.leanfe'
 version = '1.0.0'
 description = 'PuffyMC-Launcher'
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_18
-}
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -59,29 +55,13 @@ javafx {
 runtime {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
 
-// Uncomment and adjust the code below if you want to generate images for multiple platforms.
-//    targetPlatform("lin") {
-//        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.2%2B7/OpenJDK15U-jdk_x64_linux_hotspot_15.0.2_7.tar.gz")
-//    }
-//    targetPlatform("mac") {
-//        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.2%2B7/OpenJDK15U-jdk_x64_mac_hotspot_15.0.2_7.tar.gz") {
-//            downloadDir = "$buildDir/myMac"
-//            archiveName = "my-mac-jdk"
-//            archiveExtension = "tar.gz"
-//            pathToHome = "jdk-15.0.2+7/Contents/Home"
-//            overwrite = true
-//        }
-//    }
-//    targetPlatform("win") {
-//        jdkHome = jdkDownload("https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.2%2B7/OpenJDK15U-jdk_x64_windows_hotspot_15.0.2_7.zip")
-//    }
-
     launcher {
         noConsole = true
     }
+
     jpackage {
         // Uncomment and adjust the following line if your runtime task is configured to generate images for multiple platforms
-        // targetPlatformName = "mac"
+        targetPlatformName = "win"
 
         def currentOs = org.gradle.internal.os.OperatingSystem.current()
         def imgType = currentOs.windows ? 'ico' : currentOs.macOsX ? 'icns' : 'png'

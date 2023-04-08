@@ -59,6 +59,8 @@ public class FileManager {
         createSettingsDir();
         createSessionDir();
         createGameDir();
+
+        createLogDir();
     }
 
     public static File createJavaDir() {
@@ -72,5 +74,14 @@ public class FileManager {
             return new File(temp, "java.exe");
         else
             return new File(temp, "java");
+    }
+
+    public static File createLogDir() {
+        var logDir = new File(initializeApplicationFolder(), "logs");
+
+        if (!logDir.exists() || logDir.isFile())
+            logDir.mkdir();
+
+        return logDir;
     }
 }
