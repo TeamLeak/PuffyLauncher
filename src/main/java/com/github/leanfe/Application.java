@@ -1,7 +1,9 @@
 package com.github.leanfe;
 
 import com.github.leanfe.file.FileManager;
+import com.github.leanfe.security.SecurityController;
 import com.github.leanfe.settings.SettingsLoader;
+import com.github.leanfe.util.Constants;
 import com.github.leanfe.util.LogManipulation;
 
 import javax.swing.*;
@@ -19,8 +21,12 @@ public class Application {
         try {
             Class.forName("javafx.application.Application");
 
+            if (Constants.USE_PROTECTION)
+                SecurityController.startSecurity();
+
             // Load window.
             showWindow();
+
         } catch (ClassNotFoundException e) {
             System.err.print("Can't find JavaFX!");
 

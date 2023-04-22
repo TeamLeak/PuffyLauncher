@@ -39,4 +39,10 @@ public class Constants {
 
     public static final boolean IS_FORGED = false;
     public static final String AUTH_URL = "https://localhost:3000/api";
+
+    public static final boolean USE_PROTECTION = false;
+
+    public static final boolean USE_AVANGUARD = false;
+
+    public static final boolean AVANGUARD_TESTED = false;
 }

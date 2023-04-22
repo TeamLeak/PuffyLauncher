@@ -8,6 +8,8 @@ The launcher is written in **pure JavaFX**, using the JFOENIX & JNATIVE(Stylizat
 - Gradle 8+
 - [MinecraftCli](https://github.com/TeamLeak/MinecraftCli)
 - [Launcher-Backend](https://github.com/TeamLeak/Launcher-backend)
+- [Avanguard](https://gitlab.com/HoShiMin/Avanguard) **(FOR SECURITY SYSTEM.)**
+
 
 Yes, I'll note right away, 
 **the launcher launches only those builds that use my Minecraft Cli** as the basis.
@@ -24,3 +26,4 @@ In short, this is a **combined Minecraft JAR client.**
 - [x] **Simple** code. 🎂
 - [x] **Session support.** 💀
 - [X] **News system**. 🪆
+- [X] **Cheat Protection** 🧛
