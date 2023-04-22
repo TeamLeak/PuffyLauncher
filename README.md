@@ -27,3 +27,6 @@ In short, this is a **combined Minecraft JAR client.**
 - [x] **Session support.** 💀
 - [X] **News system**. 🪆
 - [X] **Cheat Protection** 🧛
+
+## Security.
+To make the Avangard protection work, you first need to build the protection dll, namely, follow the steps listed here -> [Avanguard](https://gitlab.com/HoShiMin/Avanguard)
