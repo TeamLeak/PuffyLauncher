@@ -129,7 +129,7 @@ public class BaseController implements Initializable, DownloadListener, Universa
     private static void runDaemon() {
         Runnable runnable = () -> {
             try {
-                Process game = GameStarter.startGame("1.16.5");
+                Process game = GameStarter.startGame(Constants.VERSION_ID);
 
                 game.wait();
 

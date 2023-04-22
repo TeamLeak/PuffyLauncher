@@ -45,4 +45,8 @@ public class Constants {
     public static final boolean USE_AVANGUARD = false;
 
     public static final boolean AVANGUARD_TESTED = false;
+
+    /* Сюда можно впихнуть и 1.7.10 */
+    public static final String VERSION_ID = "1.16.5";
+
 }
