@@ -6,6 +6,8 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
 
     id 'org.beryx.runtime' version '1.12.5'
+
+    id 'signing' // add this line to apply the signing plugin
 }
 
 repositories {
@@ -46,6 +48,10 @@ tasks.withType(JavaCompile) {
 application {
     mainClass = "com.github.leanfe.Application"
     applicationName = 'PuffyMC Launcher'
+}
+
+signing {
+    sign configurations.archives
 }
 
 javafx {

@@ -9,6 +9,7 @@ import javax.swing.*;
 public class Application {
 
     public static void main(String[] args) {
+
         LogManipulation.redirectErrorsToFile();
 
         FileManager.initializeAllDirs();
