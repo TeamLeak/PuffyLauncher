@@ -10,6 +10,9 @@ import java.net.http.HttpResponse;
 public class AuthManager {
 
     public static boolean processLogin(String username, String password) {
+
+        if (Constants.DEBUG) return true;
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(getUriWithParams())

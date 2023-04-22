@@ -26,7 +26,6 @@ public class LoginController implements Initializable {
     public Label ERROR_MESSAGE;
 
     public void processLogin() {
-        // TODO:
         boolean result = AuthManager.processLogin(login.getText(), password.getText());
 
         if (result) {
@@ -38,6 +37,7 @@ public class LoginController implements Initializable {
             TITLE.setText("ОШИБКА ВХОДА");
             ERROR_MESSAGE.setVisible(true);
         }
+
     }
 
     public void resetPassword() {

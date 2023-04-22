@@ -49,4 +49,5 @@ public class Constants {
     /* Сюда можно впихнуть и 1.7.10 */
     public static final String VERSION_ID = "1.16.5";
 
+    public static final boolean DEBUG = true;
 }
